@@ -12,4 +12,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # 运行 Python API
-CMD ["chainlit", "run", "app_cn.py"]
+CMD ["chainlit", "run", "app_server.py"]
