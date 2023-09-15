@@ -165,7 +165,7 @@ class Chatbot:
         if self.function_manager:
             response = await acompletion(
                 api_key=self.api_key,
-                custom_api_base=self.base_url,
+                api_base=self.base_url,
                 model=self.engine,
                 messages=self.conversation[convo_id],
                 functions=self.function_manager.generate_functions_array(),
@@ -179,7 +179,7 @@ class Chatbot:
         else:
             response = await acompletion(
                 api_key=self.api_key,
-                custom_api_base=self.base_url,
+                api_base=self.base_url,
                 model=self.engine,
                 messages=self.conversation[convo_id],
                 temperature=kwargs.get("temperature", self.temperature),
