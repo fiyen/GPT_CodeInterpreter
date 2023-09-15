@@ -193,7 +193,7 @@ class Chatbot:
         function_name = None
         function_args = ""
         print("response: ", response)
-        for resp in response:
+        async for resp in response:
             choices = resp.get("choices")
             if not choices:
                 continue
