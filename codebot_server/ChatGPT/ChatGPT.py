@@ -192,6 +192,7 @@ class Chatbot:
         full_response: str = ""
         function_name = None
         function_args = ""
+        print("response: ", response)
         for resp in response:
             choices = resp.get("choices")
             if not choices:
